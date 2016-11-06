@@ -115,7 +115,7 @@ public final class CalculatorActivity extends Activity {
 
     void changeText(String s) {
         if (textState == 0) {
-            text.setText(text.getText().toString().concat(s));
+            if (text.getText().toString().length() <= 10) text.setText(text.getText().toString().concat(s));
         } else {
             text.setText(s);
             textState = 0;
